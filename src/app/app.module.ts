@@ -6,6 +6,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+import { OneSignal } from '@ionic-native/onesignal';
+import { PushProvider } from '../providers/push/push';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -28,6 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    OneSignal,
+    PushProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
